@@ -1,1 +1,7 @@
-
+@font-face {
+  font-family: a_reg;
+  src: url(assets/fonts/aa_r.ttf);
+}
+*{
+  font-family: a_reg;
+}
