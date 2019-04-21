@@ -9,6 +9,8 @@
 
 *{
   font-family: dimitri;
+  letter-spacing: 3px;
+  font-size: 15pt;
 }
 .extra{
     margin:0;
