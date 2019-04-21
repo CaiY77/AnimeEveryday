@@ -1,4 +1,11 @@
-import {Input, Form, Select, Radio, Button, Icon} from 'semantic-ui-react'
+import {
+  Input,
+  Form,
+  Select,
+  Radio,
+  Button,
+  Icon
+} from 'semantic-ui-react'
 import React, {Component} from 'react';
 import '../css/SearchBar.css'
 
@@ -28,36 +35,36 @@ class SearchBar extends Component {
   }
 
   showSearchBar = () => {
-    const {fetchSearched, searchHandle,genreHandle,fetchGenre} = this.props;
+    const {fetchSearched, searchHandle, genreHandle, fetchGenre} = this.props;
     const {byGenre} = this.state;
-    if (byGenre) {
-      return <Form className ="genre-form large" onSubmit={fetchGenre}>
+
+    return (byGenre)
+      ? <Form className="genre-form large" onSubmit={fetchGenre}>
         <Form.Group>
           <Form.Field
-            className = "genre-search large"
+            className="genre-search large"
             control={Select}
             options={options}
             placeholder="Select Genre"
-            onChange={(e, { value }) => genreHandle(value)}
+            onChange={(e, {value}) => genreHandle(value)}
           />
           <div className="need-space"></div>
-          <Button
-            type="submit"
-            icon ='search'
-            content="Search"
-          />
+          <Button type="submit" icon='search' content="Search"/>
         </Form.Group>
       </Form>
-    } else {
-      return <Form className="title-search large" onSubmit={() => fetchSearched()}>
+
+      : <Form
+        className="title-search large"
+        onSubmit={() => fetchSearched()}
+        >
         <Input
-          label="Find Anime !"
+          label="Search Title"
           onChange={searchHandle}
           action={{icon: 'search'}}
           placeholder='Enter Title'
         />
       </Form>
-    }
+
   }
 
   handleToggle = () => {
@@ -66,16 +73,20 @@ class SearchBar extends Component {
     });
   }
 
-  render() {
+  searchBy = () => {
+    return (
+      (this.state.byGenre)
+      ? "Genre"
+      : "Title");
+  }
 
-    return (<div className = "search-bar-style">
-      <div className ="toggles">
-        <Radio toggle="toggle" onClick={this.handleToggle}/>
-        {
-          (this.state.byGenre)
-            ? <h3 className="search-style">Search by Genre !</h3>
-            : <h3 className="search-style">Search by Title !</h3>
-        }
+  render() {
+    return (<div className="search-bar-style">
+      <div className="toggles">
+        <Radio toggle onClick={this.handleToggle}/>
+
+        <h3 className="search-style">Searching by {this.searchBy()} !</h3>
+
       </div>
       {this.showSearchBar()}
     </div>);

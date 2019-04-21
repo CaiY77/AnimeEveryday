@@ -12,8 +12,10 @@
 }
 
 .search-style{
-  font-family: a_reg;
+  font-family: a_bold;
   margin:0 0 0 20px;
+  color: crimson;
+  font-size: 20pt;
 }
 
 .genre-search{
@@ -29,9 +31,12 @@
   padding-left: 25%;
 }
 .search-bar-style{
-  border: solid;
-  padding: 20vh 10vw 20vh 10vw;
-  height: 60vh;
+  background: url(../assets/images/sb2.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 25vh 10vw 20vh 10vw;
+  height: 80vh;
 }
 .toggles{
   padding: 2vh 2vw 2vh 2vw;
@@ -39,5 +44,5 @@
   justify-content: center;
 }
 .need-space{
-  width: 20px;
+  width: 10px;
 }
