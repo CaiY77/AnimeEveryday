@@ -1,21 +1,13 @@
 @font-face {
-  font-family: a_reg;
-  src: url(../assets/fonts/aa_r.ttf);
+  font-family: dimis;
+  src: url(../assets/fonts/dimitri.TTF);
 }
-@font-face {
-  font-family: a_bold;
-  src: url(../assets/fonts/aa_b.ttf);
-}
-@font-face {
-  font-family: a_italic;
-  src: url(../assets/fonts/aa_i.ttf);
-}
-
 .search-style{
-  font-family: a_bold;
+  font-family: dimis;
   margin:0 0 0 20px;
   color: crimson;
-  font-size: 20pt;
+  font-size: 25pt;
+  letter-spacing: 3px;
 }
 
 .genre-search{
@@ -31,7 +23,7 @@
   padding-left: 25%;
 }
 .search-bar-style{
-  background: url(../assets/images/sb2.jpg);
+  background: url(../assets/images/sb.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

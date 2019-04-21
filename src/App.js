@@ -3,7 +3,7 @@ import {Route, Link} from 'react-router-dom'
 import SearchBar from './components/SearchBar.js'
 import Bookmark from './components/Bookmark.js'
 import SearchResult from './components/SearchResult.js'
-
+import axios from 'axios'
 import './App.css';
 
 class App extends Component {
@@ -27,10 +27,18 @@ class App extends Component {
   }
 
   fetchSearched = (event) => {
-    console.log('name search');
+    let url = `https://api.jikan.moe/v3/search/anime?q=${this.state.searchVal}&page=1`
+    axios.get(url)
+    .then(response => response.data.results)
+    .then(data => {
+      this.setState({
+        searchResults: data
+      });
+    })
   }
+
   fetchGenre=(event)=>{
-console.log("genre search");
+    console.log("genre search");
   }
 
 

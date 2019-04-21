@@ -84,9 +84,7 @@ class SearchBar extends Component {
     return (<div className="search-bar-style">
       <div className="toggles">
         <Radio toggle onClick={this.handleToggle}/>
-
         <h3 className="search-style">Searching by {this.searchBy()} !</h3>
-
       </div>
       {this.showSearchBar()}
     </div>);

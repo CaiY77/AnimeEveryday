@@ -1,18 +1,14 @@
 @font-face {
-  font-family: a_reg;
-  src: url(assets/fonts/aa_r.ttf);
+  font-family: dimis;
+  src: url(assets/fonts/dimis.TTF);
 }
 @font-face {
-  font-family: a_bold;
-  src: url(assets/fonts/aa_b.ttf);
-}
-@font-face {
-  font-family: a_italic;
-  src: url(assets/fonts/aa_i.ttf);
+  font-family: dimitri;
+  src: url(assets/fonts/dimitri.TTF);
 }
 
 *{
-  font-family: a_reg;
+  font-family: dimitri;
 }
 .extra{
     margin:0;
