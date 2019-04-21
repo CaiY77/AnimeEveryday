@@ -11,17 +11,61 @@ import '../css/SearchBar.css'
 
 const options = [
   {
-    key: 'blah',
-    value: 'blah',
-    text: 'blah'
+    key: 1,
+    value: 1,
+    text: 'Action'
   }, {
-    key: 'blahh',
-    value: 'blahh',
-    text: 'blahh'
+    key: 2,
+    value: 2,
+    text: 'Adventure'
   }, {
-    key: 'blahhh',
-    value: 'blahhh',
-    text: 'blahhh'
+    key: 4,
+    value: 4,
+    text: 'Comedy'
+  }, {
+    key: 7,
+    value: 7,
+    text: 'Mystery'
+  },{
+    key: 8,
+    value: 8,
+    text: 'Drama'
+  }, {
+    key: 10,
+    value: 10,
+    text: 'Fantasy'
+  }, {
+    key: 11,
+    value: 11,
+    text: 'Game'
+  }, {
+    key: 16,
+    value: 16,
+    text: 'Magic'
+  }, {
+    key: 18,
+    value: 18,
+    text: 'Mecha'
+  }, {
+    key: 22,
+    value: 22,
+    text: 'Romance'
+  }, {
+    key: 24,
+    value: 24,
+    text: 'Sci-Fi'
+  }, {
+    key: 27,
+    value: 27,
+    text: 'Shounen'
+  }, {
+    key: 37,
+    value: 37,
+    text: 'Supernatural'
+  }, {
+    key: 38,
+    value: 38,
+    text: 'Military'
   }
 ]
 
