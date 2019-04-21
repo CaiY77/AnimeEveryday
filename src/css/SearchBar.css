@@ -1,0 +1,30 @@
+@font-face {
+  font-family: a_reg;
+  src: url(../assets/fonts/aa_r.ttf);
+}
+@font-face {
+  font-family: a_bold;
+  src: url(../assets/fonts/aa_b.ttf);
+}
+@font-face {
+  font-family: a_italic;
+  src: url(../assets/fonts/aa_i.ttf);
+}
+
+.search-style{
+  font-family: a_reg;
+}
+
+.genre-search{
+  width: 35.5vw;
+  height: 100%;
+}
+
+.genre-form{
+  display: flex;
+  border: solid red;
+}
+.search-bar-style{
+  border: solid;
+  padding: 5vh 5vw 5vh 5vw;
+}
