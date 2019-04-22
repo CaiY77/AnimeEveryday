@@ -1,11 +1,4 @@
-import {
-  Input,
-  Form,
-  Select,
-  Radio,
-  Button,
-  Icon
-} from 'semantic-ui-react'
+import {Input,Form,Select,Radio,Button,Icon} from 'semantic-ui-react'
 import React, {Component} from 'react';
 import '../css/SearchBar.css'
 

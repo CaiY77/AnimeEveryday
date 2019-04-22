@@ -46,12 +46,11 @@ class App extends Component {
 
 
   render() {
-    const {searchVal,byGenre} = this.state;
-
+    const {searchVal,byGenre,searchResults} = this.state;
     return (<div>
       <nav className="ui massive fluid two item menu">
-        <Link to="/" className="item">Find My Anime</Link>
-        <Link to="/bookmark" className="item">My Bookmarks</Link>
+        <Link to="/" className="item link-style">Find My Anime</Link>
+        <Link to="/bookmark" className="item link-style">My Bookmarks</Link>
       </nav>
 
       <SearchBar
@@ -62,7 +61,9 @@ class App extends Component {
       />
 
       <main>
-        <Route exact path="/" component={SearchResult}/>
+        <Route exact path="/"
+          render={ ()=><SearchResult searchResults={searchResults}/> }
+        />
         <Route path="/bookmark" component={Bookmark}/>
       </main>
     </div>);

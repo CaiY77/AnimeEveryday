@@ -2,16 +2,17 @@
   font-family: dimis;
   src: url(assets/fonts/dimis.TTF);
 }
+
 @font-face {
   font-family: dimitri;
   src: url(assets/fonts/dimitri.TTF);
 }
 
-*{
-  font-family: dimitri;
-  letter-spacing: 3px;
-  font-size: 15pt;
+* {
+  font-family: dimis;
 }
-.extra{
-    margin:0;
+
+.link-style{
+  letter-spacing: 3px;
+  font-size: 20pt;
 }

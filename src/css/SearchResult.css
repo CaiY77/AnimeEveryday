@@ -1,0 +1,19 @@
+.search-result-style{
+display: flex;
+flex-wrap: wrap;
+padding: 5vh 0 5vh 0;
+}
+
+.anime-section{
+  margin: 5vh 2.5vw 0 2.5vw;
+  padding: 0;
+  display: grid;
+  height: 50vh;
+  width: 45vw;
+  border:solid 1px;
+  grid-template-columns: ;
+  grid-template-rows: ;
+  grid-template-areas:
+
+  ;
+}

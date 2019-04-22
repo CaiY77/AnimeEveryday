@@ -1,9 +1,13 @@
 @font-face {
-  font-family: dimis;
+  font-family: dimitri;
   src: url(../assets/fonts/dimitri.TTF);
 }
-.search-style{
+@font-face {
   font-family: dimis;
+  src: url(../assets/fonts/dimis.TTF);
+}
+.search-style{
+  font-family: dimitri;
   margin:0 0 0 20px;
   color: crimson;
   font-size: 25pt;
