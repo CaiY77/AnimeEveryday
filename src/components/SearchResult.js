@@ -11,8 +11,8 @@ class SearchResults extends Component {
       return <section className="anime-section" key={anime.mal_id}>
         <img className="anime-img" src={anime.image_url}></img>
         <h1 className="anime-title">{anime.title}</h1>
-        <h2><Icon name="desktop"/> {anime.episodes} Episodes</h2>
-        <h2><Icon name="star yellow"/> {anime.score} / 10</h2>
+        <h3 className="anime-episodes"><Icon name="desktop"/> {anime.episodes} Episode(s)</h3>
+        <h3 className="anime-score"><Icon name="star yellow"/> {anime.score} / 10</h3>
         <p className="anime-synopsis">{anime.synopsis}</p>
       </section>
     })

@@ -1,9 +1,13 @@
+@font-face {
+  font-family: aa_reg;
+  src: url(../assets/fonts/aa_r.ttf);
+}
+
 .search-result-style{
 display: flex;
 flex-wrap: wrap;
 padding: 5vh 0 5vh 0;
 }
-
 .anime-section{
   margin: 5vh 2.5vw 0 2.5vw;
   padding: 0;
@@ -11,9 +15,47 @@ padding: 5vh 0 5vh 0;
   height: 50vh;
   width: 45vw;
   border:solid 1px;
-  grid-template-columns: ;
-  grid-template-rows: ;
+  grid-template-columns: 40% 60%;
+  grid-template-rows: 25% 15% 15% 45% ;
   grid-template-areas:
-
+  "img title"
+  "img episodes"
+  "img score"
+  "img synopsis"
   ;
+}
+.anime-img{
+  grid-area: img;
+  margin:0;
+  padding:0;
+  border: solid 1px;
+}
+.anime-title{
+  grid-area: title;
+  height: 100%;
+  margin:0;
+  padding:0;
+  border: solid 1px;
+}
+.anime-episodes{
+  grid-area: episodes;
+  height: 100%;
+  margin:0;
+  padding:0;
+  border: solid 1px;
+}
+.anime-score{
+  grid-area: score;
+  height: 100%;
+  margin:0;
+  padding:0;
+  border: solid 1px;
+}
+.anime-synopsis{
+  grid-area: synopsis;
+  font-family: aa_reg;
+  height: 100%;
+  margin:0;
+  padding:0;
+  border: solid 1px;
 }
