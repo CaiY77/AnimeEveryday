@@ -10,7 +10,7 @@ padding: 5vh 0 5vh 0;
 }
 .anime-section{
   margin: 5vh 2.5vw 0 2.5vw;
-  padding: 0;
+  padding: 0.5%;
   display: grid;
   height: 50vh;
   width: 45vw;
@@ -28,6 +28,8 @@ padding: 5vh 0 5vh 0;
 .anime-img{
   grid-area: img;
   margin:auto;
+  width: 225px;
+  height: 317px;
 }
 .anime-title{
   grid-area: title;
@@ -56,7 +58,5 @@ padding: 5vh 0 5vh 0;
 }
 .anime-favorite{
   grid-area: fav;
-  height: 100%;
-  margin:0;
-  padding:0;
+  margin:auto;
 }

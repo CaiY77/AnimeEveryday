@@ -13,7 +13,7 @@ class Anime extends Component {
         <h3 className="anime-episodes"><Icon name="desktop"/> {episodes} Episode(s)</h3>
         <h3 className="anime-score"><Icon className="yellow" name="star"/> {score} / 10</h3>
         <p className="anime-synopsis">{syn}</p>
-        <Favorite favorites={favorites} anime={anime} handleFavorite={handleFavorite} className="anime-favorite" />
+        <Favorite favorites={favorites} anime={anime} handleFavorite={handleFavorite}/>
       </section>
     );
   }

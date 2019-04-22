@@ -24,8 +24,9 @@ class Favorite extends Component {
 
   render() {
 const {isFave} = this.state;
-    return (<div>
+    return (<div className ="anime-favorite">
       <Button
+        content="  Bookmark"
         toggle
         icon = {
           (isFave)
