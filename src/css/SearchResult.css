@@ -2,13 +2,20 @@
   font-family: aa_reg;
   src: url(../assets/fonts/aa_r.ttf);
 }
-
-.search-result-style{
-display: flex;
-flex-wrap: wrap;
-padding: 5vh 0 5vh 0;
+@font-face {
+  font-family: dimitri;
+  src: url(../assets/fonts/dimitri.TTF);
 }
+.search-result-style{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 5vh 0 5vh 0;
+  margin: 5vh 0 0 0;
+  background: linear-gradient(270deg, rgba(189, 195, 199,0.7),rgba(44, 62, 80,0.7));
+}
+
 .anime-section{
+  background: rgba(255, 255, 255, 0.8);
   margin: 5vh 2.5vw 0 2.5vw;
   padding: 0.5%;
   display: grid;
@@ -24,6 +31,11 @@ padding: 5vh 0 5vh 0;
   "img synopsis"
   "fav synopsis"
   ;
+}
+.anime-section:hover{
+  transform:scale(1.1);
+  transition: 0.5s ease-in-out;
+  box-shadow: 10px 10px;
 }
 .anime-img{
   grid-area: img;
@@ -55,8 +67,17 @@ padding: 5vh 0 5vh 0;
   height: 100%;
   margin:0;
   padding:5%;
+  overflow-y: auto;
 }
 .anime-favorite{
   grid-area: fav;
-  margin:auto;
+  margin: auto;
+}
+.result-style{
+  font-family: dimitri;
+  color:white;
+  font-size: 50pt;
+  width: 100%;
+  text-align: center;
+  letter-spacing: 5px;
 }

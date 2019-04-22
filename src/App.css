@@ -16,3 +16,17 @@
   letter-spacing: 3px;
   font-size: 20pt;
 }
+.my-body{
+  background: url(./assets/images/body.jpg);
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+
+}
+
+nav{
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}

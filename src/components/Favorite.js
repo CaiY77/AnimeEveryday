@@ -3,27 +3,13 @@ import {Button,Icon} from 'semantic-ui-react'
 
 class Favorite extends Component {
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      isFave: false
-    };
-  }
-
   favClick = (e) => {
     e.stopPropagation();
     this.props.handleFavorite(this.props.anime);
   }
 
-  checkForFave = () => {
-    this.setState({
-      isFave: !this.state.isFave
-    });
-
-  }
-
   render() {
-const {isFave} = this.state;
+    const {isFave} = this. props;
     return (<div className ="anime-favorite">
       <Button
         content="  Bookmark"
@@ -34,8 +20,7 @@ const {isFave} = this.state;
             : "heart outline"
         }
         onClick={(e) => {
-          this.favClick(e);
-          this.checkForFave();
+          this.favClick(e)
         }}
         active={isFave}
       ></Button>

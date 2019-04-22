@@ -5,7 +5,7 @@ import Favorite from './Favorite'
 class Anime extends Component {
 
   render() {
-    const {img,title,episodes,score,syn,handleFavorite,anime,favorites} = this.props
+    const {img,title,episodes,score,syn,handleFavorite,anime,favorites,isFave} = this.props
     return (
       <section className="anime-section">
         <img className="anime-img" src={img}></img>
@@ -13,7 +13,7 @@ class Anime extends Component {
         <h3 className="anime-episodes"><Icon name="desktop"/> {episodes} Episode(s)</h3>
         <h3 className="anime-score"><Icon className="yellow" name="star"/> {score} / 10</h3>
         <p className="anime-synopsis">{syn}</p>
-        <Favorite favorites={favorites} anime={anime} handleFavorite={handleFavorite}/>
+        <Favorite isFave={isFave}favorites={favorites} anime={anime} handleFavorite={handleFavorite}/>
       </section>
     );
   }

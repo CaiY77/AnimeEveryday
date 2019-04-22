@@ -39,7 +39,15 @@ class App extends Component {
   }
 
   fetchGenre=(event)=>{
-    console.log("genre search");
+    let url = `https://api.jikan.moe/v3/genre/anime/${this.state.genre}/1`
+    axios.get(url)
+    .then(response => response.data.anime)
+    .then(data=>{
+      console.log(data)
+      this.setState({
+        searchResults: data
+      });
+    })
   }
 
   handleFavorite=(anime)=>{
@@ -64,7 +72,7 @@ class App extends Component {
 
   render() {
     const {searchVal,byGenre,searchResults,favorites} = this.state;
-    return (<div>
+    return (<div className ="my-body">
       <nav className="ui massive fluid two item menu">
         <Link to="/" className="item link-style">Find My Anime</Link>
         <Link to="/bookmark" className="item link-style">My Bookmarks</Link>
@@ -83,9 +91,14 @@ class App extends Component {
             favorites={favorites}
             searchResults={searchResults}
             handleFavorite={this.handleFavorite}
-                       /> }
+                        /> }
         />
-        <Route path="/bookmark" component={Bookmark}/>
+        <Route path="/bookmark"
+          render={()=> <Bookmark
+            favorites={favorites}
+            handleFavorite={this.handleFavorite}
+                       />}
+        />
       </main>
     </div>);
   }
