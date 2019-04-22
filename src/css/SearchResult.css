@@ -16,46 +16,47 @@ padding: 5vh 0 5vh 0;
   width: 45vw;
   border:solid 1px;
   grid-template-columns: 40% 60%;
-  grid-template-rows: 25% 15% 15% 45% ;
+  grid-template-rows: 37% 9% 9% 35% 10% ;
   grid-template-areas:
   "img title"
   "img episodes"
   "img score"
   "img synopsis"
+  "fav synopsis"
   ;
 }
 .anime-img{
   grid-area: img;
-  margin:0;
-  padding:0;
-  border: solid 1px;
+  margin:auto;
 }
 .anime-title{
   grid-area: title;
   height: 100%;
   margin:0;
-  padding:0;
-  border: solid 1px;
+  text-align: center;
 }
 .anime-episodes{
   grid-area: episodes;
   height: 100%;
   margin:0;
   padding:0;
-  border: solid 1px;
 }
 .anime-score{
   grid-area: score;
   height: 100%;
   margin:0;
   padding:0;
-  border: solid 1px;
 }
 .anime-synopsis{
   grid-area: synopsis;
   font-family: aa_reg;
   height: 100%;
   margin:0;
+  padding:5%;
+}
+.anime-favorite{
+  grid-area: fav;
+  height: 100%;
+  margin:0;
   padding:0;
-  border: solid 1px;
 }

@@ -12,7 +12,8 @@ class App extends Component {
     this.state = {
       searchVal: '',
       genre: "",
-      searchResults: []
+      searchResults: [],
+      favorites: []
     };
   }
 
@@ -41,12 +42,28 @@ class App extends Component {
     console.log("genre search");
   }
 
+  handleFavorite=(anime)=>{
+
+    const favCopy = this.state.favorites.slice();
+    const index = this.state.favorites.indexOf(anime);
+
+    if (index >= 0){
+      favCopy.splice(index,1);
+    } else {
+      favCopy.push(anime);
+    }
+
+    this.setState({
+      favorites: favCopy
+    });
+  }
+
 
 
 
 
   render() {
-    const {searchVal,byGenre,searchResults} = this.state;
+    const {searchVal,byGenre,searchResults,favorites} = this.state;
     return (<div>
       <nav className="ui massive fluid two item menu">
         <Link to="/" className="item link-style">Find My Anime</Link>
@@ -62,7 +79,11 @@ class App extends Component {
 
       <main>
         <Route exact path="/"
-          render={ ()=><SearchResult searchResults={searchResults}/> }
+          render={ ()=> <SearchResult
+            favorites={favorites}
+            searchResults={searchResults}
+            handleFavorite={this.handleFavorite}
+                       /> }
         />
         <Route path="/bookmark" component={Bookmark}/>
       </main>
