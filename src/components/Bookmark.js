@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import '../css/SearchResult.css'
 import Anime from './Anime'
+import Episode from './Episode'
 import {Modal} from 'semantic-ui-react'
 
 class Bookmark extends Component {
@@ -24,7 +25,9 @@ class Bookmark extends Component {
         />
       </div>
       }>
-
+        <Modal.Content>
+          <Episode animeID={anime.mal_id} />
+        </Modal.Content>
       </Modal>
     })
     return allAnime;
