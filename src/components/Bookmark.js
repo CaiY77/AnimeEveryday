@@ -10,7 +10,8 @@ class Bookmark extends Component {
     const {favorites, handleFavorite} = this.props;
 
     const allAnime = favorites.map(anime=>{
-      return <Modal trigger={ <div>
+      
+      return <Modal trigger={ <div className="div-style">
         <Anime
           anime={anime}
           key={anime.mal_id}
