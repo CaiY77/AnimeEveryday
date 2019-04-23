@@ -41,12 +41,14 @@ class Anime extends Component {
           anime={anime}
           handleFavorite={handleFavorite}
         />
-        <Modal className="anime-modal" trigger={<Button onClick={()=>this.fetchEps()}><Icon name="desktop"/>Episode</Button>}>
-          <Modal.Content>
-            <Episode eps={this.state.eps}/>
-          </Modal.Content>
-        </Modal>
-
+        {(episodes > 1)
+          ?<Modal className="anime-modal" trigger={<Button onClick={()=>this.fetchEps()}><Icon name="desktop"/>Episode</Button>}>
+            <Modal.Content>
+              <Episode eps={this.state.eps}/>
+            </Modal.Content>
+          </Modal>
+          : <Button><Icon name="close"></Icon>Unavailable</Button>
+        }
       </section>
     );
   }
