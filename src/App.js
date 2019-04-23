@@ -11,8 +11,9 @@ class App extends Component {
     super(props);
     this.state = {
       searchVal: '',
-      genre: "",
+      genre: '',
       searchResults: [],
+      where: null,
       favorites: JSON.parse(window.localStorage.getItem('favorites')) || []
     };
   }
@@ -74,24 +75,38 @@ class App extends Component {
 
   }
 
+  crappyFix=()=>{
+    this.setState({
+      where : true
+    });
+  }
+
+  crappyFix2=()=>{
+    this.setState({
+      where : false
+    });
+  }
 
 
 
   render() {
-    const {searchVal,byGenre,searchResults,favorites} = this.state;
+    const {searchVal,byGenre,searchResults,favorites,where} = this.state;
     return (<div className ="my-body">
       <nav className="ui massive fluid two item menu">
-        <Link to="/" className="item link-style">Find My Anime</Link>
-        <Link to="/bookmark" className="item link-style">My Bookmarks</Link>
+        <Link onClick={()=>this.crappyFix2()} to="/" className="item link-style">Find My Anime</Link>
+        <Link onClick={()=>this.crappyFix()} to="/bookmark" className="item link-style">My Bookmarks</Link>
       </nav>
 
-      <SearchBar
-        searchHandle={this.searchHandle}
-        fetchSearched={this.fetchSearched}
-        genreHandle={this.genreHandle}
-        fetchGenre={this.fetchGenre}
-      />
-
+      {
+        (where)
+          ? null
+          : (<SearchBar
+            searchHandle={this.searchHandle}
+            fetchSearched={this.fetchSearched}
+            genreHandle={this.genreHandle}
+            fetchGenre={this.fetchGenre}
+             />)
+      }
       <main>
         <Route exact path="/"
           render={ ()=> <SearchResult
