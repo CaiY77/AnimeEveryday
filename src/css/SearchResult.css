@@ -33,13 +33,13 @@
   ;
 }
 .anime-section:hover{
-  transform:scale(1.1);
-  transition: 0.5s ease-in-out;
-  box-shadow: 10px 10px;
+  box-shadow: 0 10px 10px 0px rgba(0,0,0,.8);
+  transform: scale(1.05);
+  transition: 0.3s ease-in-out;
 }
 .anime-img{
   grid-area: img;
-  margin:auto;
+  margin: 1vw;
   width: 225px;
   height: 317px;
 }
