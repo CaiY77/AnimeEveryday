@@ -1,7 +1,5 @@
 import React, {Component} from 'react';
-import { Modal, Icon, Button } from 'semantic-ui-react'
 import Anime from './Anime'
-import Episode from './Episode'
 import '../css/SearchResult.css'
 
 class SearchResults extends Component {
@@ -12,25 +10,19 @@ class SearchResults extends Component {
     const allAnime = searchResults.map(anime=>{
       let isFave = favorites.includes(anime);
 
-      return <Modal key={anime.mal_id}
-        trigger={ <div className="div-style">
-          <Anime
-            anime={anime}
-            img ={anime.image_url}
-            title={anime.title}
-            episodes = {anime.episodes}
-            score = {anime.score}
-            syn = {anime.synopsis}
-            handleFavorite = {handleFavorite}
-            favorites={favorites}
-            isFave = {isFave}
-          />
-        </div>
-        }>
-        <Modal.Content>
-          <Episode animeID={anime.mal_id} />
-        </Modal.Content>
-      </Modal>
+      return <Anime
+        anime={anime}
+        key={anime.mal_id}
+        img ={anime.image_url}
+        title={anime.title}
+        episodes = {anime.episodes}
+        score = {anime.score}
+        syn = {anime.synopsis}
+        handleFavorite = {handleFavorite}
+        favorites={favorites}
+        isFave = {isFave}
+             />
+
     })
 
     return allAnime;

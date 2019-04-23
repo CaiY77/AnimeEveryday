@@ -10,20 +10,19 @@ class Favorite extends Component {
 
   render() {
     const {isFave} = this. props;
-    return (<div className ="anime-favorite">
-      <Button toggle
-        content = "  Bookmark"
-        icon = {
-          (isFave)
-            ? "heart"
-            : "heart outline"
-        }
-        onClick={(e) => {
-          this.favClick(e)
-        }}
-        active={isFave}
-      ></Button>
-    </div>);
+    return (<Button toggle
+      content = "Like"
+      className ="anime-favorite"
+      icon = {
+        (isFave)
+          ? "heart"
+          : "heart outline"
+      }
+      onClick={(e) => {
+        this.favClick(e)
+      }}
+      active={isFave}
+            ></Button>);
   }
 
 }

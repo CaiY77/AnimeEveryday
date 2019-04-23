@@ -16,20 +16,21 @@
 
 .anime-section{
   background: rgba(255, 255, 255, 0.4);
-  padding: 1%;
+  padding: 0.5%;
+  margin: 5vh 2.5vw 0 2.5vw;
   display: grid;
   height: 50vh;
   width: 45vw;
   border: outset 3px;
   border-radius: 10px;
-  grid-template-columns: 40% 60%;
+  grid-template-columns:20% 20% 60%;
   grid-template-rows: 37% 9% 9% 35% 10% ;
   grid-template-areas:
-  "img title"
-  "img episodes"
-  "img score"
-  "img synopsis"
-  "fav synopsis"
+  "img img title"
+  "img img episodes"
+  "img img score"
+  "img img synopsis"
+  "fav modal synopsis"
   ;
 }
 .anime-section:hover{
@@ -70,7 +71,9 @@
 }
 .anime-favorite{
   grid-area: fav;
-  margin: auto;
+}
+.anime-modal{
+  grid-area: modal;
 }
 .result-style{
   font-family: dimitri;
@@ -79,8 +82,4 @@
   width: 100%;
   text-align: center;
   letter-spacing: 5px;
-}
-.div-style{
-  margin: 5vh 2.5vw 0 2.5vw;
-  padding:0;
 }
