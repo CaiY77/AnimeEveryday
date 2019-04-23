@@ -11,7 +11,7 @@ class Anime extends Component {
     this.state = {
       eps:[],
       pages: 0,
-      curPage: 1
+      currPage: 1
     } ;
   }
 
@@ -28,7 +28,26 @@ class Anime extends Component {
     .catch(e => console.log(`Sorry, ${e}`))
   }
 
+handleInc = () => {
+  if (this.state.currPage < this.state.pages) {
+    this.setState({
+      currPage: this.state.currPage + 1
+    })
+  }
+  this.fetchEps();
+}
+
+handleDec = () => {
+  if (this.state.currPage > 1) {
+    this.setState({
+      currPage: this.state.currPage - 1
+    })
+  }
+  this.fetchEps();
+}
+
   render() {
+    const{eps,pages} = this.state;
     const {img,title,episodes,score,syn,handleFavorite,anime,favorites,isFave} = this.props
     return (
       <section className="anime-section">
@@ -44,10 +63,14 @@ class Anime extends Component {
           anime={anime}
           handleFavorite={handleFavorite}
         />
-        {(episodes > 1)
+        {(episodes > 2)
           ?<Modal className="anime-modal" trigger={<Button onClick={()=>this.fetchEps()}><Icon name="desktop"/>Episode</Button>}>
             <Modal.Content>
-              <Episode eps={this.state.eps}/>
+              <Episode
+                eps={eps}
+                inc={this.handleInc}
+                dec={this.handleDec}
+              />
             </Modal.Content>
           </Modal>
           : <Button><Icon name="close"></Icon>No More</Button>

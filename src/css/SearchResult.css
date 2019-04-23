@@ -88,3 +88,11 @@
   display: flex;
   flex-wrap: wrap;
 }
+.my-butt-bot{
+  margin-top: 3vh;
+  text-align: center;
+}
+.my-butt-top{
+  margin-bottom: 3vh;
+  text-align: center;
+}

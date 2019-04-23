@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
-import {Card} from 'semantic-ui-react'
+import {Card, Button,Icon} from 'semantic-ui-react'
 
 class Episode extends Component {
 
 printEps = () => {
   const {eps} = this.props
-  console.log(eps)
 
   let epsArr = eps.map(episode =>{
     return (<Card
@@ -25,11 +24,32 @@ printEps = () => {
 }
 
   render() {
+    const {inc, dec}= this.props
     return (
       <div>
+        <div className="my-butt-top">
+          <Button onClick={()=>{dec()}} icon labelPosition='left'>
+            <Icon name='left arrow' />
+            Previous
+          </Button>
+          <Button onClick={()=>inc()} icon labelPosition='right'>
+            Next
+            <Icon name='right arrow' />
+          </Button>
+        </div>
         <Card.Group itemsPerRow={4}>
           {this.printEps()}
         </Card.Group>
+        <div className="my-butt-bot">
+          <Button onClick={()=>{dec()}} icon labelPosition='left'>
+            <Icon name='left arrow' />
+            Previous
+          </Button>
+          <Button onClick={()=>inc()} icon labelPosition='right'>
+            Next
+            <Icon name='right arrow' />
+          </Button>
+        </div>
       </div>
     );
   }
