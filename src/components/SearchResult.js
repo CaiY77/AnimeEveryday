@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import { Modal, Icon, Button } from 'semantic-ui-react'
 import Anime from './Anime'
+import Episode from './Episode'
 import '../css/SearchResult.css'
 
 class SearchResults extends Component {
@@ -27,11 +28,11 @@ class SearchResults extends Component {
       </div>
       }>
         <Modal.Content>
-          <h1>Hello</h1>
+          <Episode animeID={anime.mal_id} />
         </Modal.Content>
       </Modal>
-
     })
+
     return allAnime;
   }
 
