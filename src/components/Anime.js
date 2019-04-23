@@ -5,9 +5,9 @@ import Favorite from './Favorite'
 class Anime extends Component {
 
   render() {
-    const {img,title,episodes,score,syn,handleFavorite,anime,favorites,isFave,handleClick} = this.props
+    const {img,title,episodes,score,syn,handleFavorite,anime,favorites,isFave} = this.props
     return (
-      <section onClick={()=>handleClick(anime)} className="anime-section">
+      <section className="anime-section">
         <img className="anime-img" src={img}></img>
         <h1 className="anime-title">{title}</h1>
         <h3 className="anime-episodes"><Icon name="desktop"/> {episodes} Episode(s)</h3>

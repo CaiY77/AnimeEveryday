@@ -5,29 +5,30 @@ import '../css/SearchResult.css'
 
 class SearchResults extends Component {
 
-  openEpisodes = (anime) => {
-    console.log(anime);
-  }
-
   printAnime = () => {
     const {searchResults,handleFavorite,favorites} = this.props;
 
     const allAnime = searchResults.map(anime=>{
       let isFave = favorites.includes(anime);
 
-      return <Anime
-        anime={anime}
-        key={anime.mal_id}
-        img ={anime.image_url}
-        title={anime.title}
-        episodes = {anime.episodes}
-        score = {anime.score}
-        syn = {anime.synopsis}
-        handleFavorite = {handleFavorite}
-        favorites={favorites}
-        isFave = {isFave}
-        handleClick={this.openEpisodes}
-             />
+      return <Modal trigger={ <div>
+        <Anime
+          anime={anime}
+          key={anime.mal_id}
+          img ={anime.image_url}
+          title={anime.title}
+          episodes = {anime.episodes}
+          score = {anime.score}
+          syn = {anime.synopsis}
+          handleFavorite = {handleFavorite}
+          favorites={favorites}
+          isFave = {isFave}
+        />
+      </div>
+      }>
+
+      </Modal>
+
     })
     return allAnime;
   }
