@@ -65,13 +65,13 @@ class App extends Component {
       favCopy.push(anime);
     }
 
-    console.log(favCopy);
     this.setState({
       favorites: favCopy
     });
 
     window.localStorage.clear();
-    window.localStorage.setItem('favorites', JSON.stringify(favorites));
+    
+    window.localStorage.setItem('favorites', JSON.stringify(favCopy));
 
   }
 

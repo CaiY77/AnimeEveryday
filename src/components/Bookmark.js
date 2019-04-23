@@ -11,21 +11,21 @@ class Bookmark extends Component {
 
     const allAnime = favorites.map(anime=>{
 
-      return <Modal trigger={ <div className="div-style">
-        <Anime
-          anime={anime}
-          key={anime.mal_id}
-          img ={anime.image_url}
-          title={anime.title}
-          episodes = {anime.episodes}
-          score = {anime.score}
-          syn = {anime.synopsis}
-          handleFavorite = {handleFavorite}
-          favorites={favorites}
-          isFave = "true"
-        />
-      </div>
-      }>
+      return <Modal key={anime.mal_id}
+        trigger={ <div className="div-style">
+          <Anime
+            anime={anime}
+            img ={anime.image_url}
+            title={anime.title}
+            episodes = {anime.episodes}
+            score = {anime.score}
+            syn = {anime.synopsis}
+            handleFavorite = {handleFavorite}
+            favorites={favorites}
+            isFave = "true"
+          />
+        </div>
+        }>
         <Modal.Content>
           <Episode animeID={anime.mal_id} />
         </Modal.Content>
@@ -36,7 +36,7 @@ class Bookmark extends Component {
 
   render() {
     return (
-      <div  className ="search-result-style">
+      <div  className ="search-result-style book-extra">
         <h1 className="result-style">MY BOOKMARKS</h1>
         {this.printAnime()}
       </div>

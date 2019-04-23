@@ -11,9 +11,8 @@ class Favorite extends Component {
   render() {
     const {isFave} = this. props;
     return (<div className ="anime-favorite">
-      <Button
-        content="  Bookmark"
-        toggle
+      <Button toggle
+        content = "  Bookmark"
         icon = {
           (isFave)
             ? "heart"
