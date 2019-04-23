@@ -11,7 +11,7 @@ class SearchResults extends Component {
     const allAnime = searchResults.map(anime=>{
       let isFave = favorites.includes(anime);
 
-      return <Modal trigger={ <div>
+      return <Modal trigger={ <div className="div-style">
         <Anime
           anime={anime}
           key={anime.mal_id}
@@ -26,7 +26,9 @@ class SearchResults extends Component {
         />
       </div>
       }>
-
+        <Modal.Content>
+          <h1>Hello</h1>
+        </Modal.Content>
       </Modal>
 
     })

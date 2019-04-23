@@ -16,7 +16,6 @@
 
 .anime-section{
   background: rgba(255, 255, 255, 0.4);
-  margin: 5vh 2.5vw 0 2.5vw;
   padding: 0.5%;
   display: grid;
   height: 50vh;
@@ -80,4 +79,8 @@
   width: 100%;
   text-align: center;
   letter-spacing: 5px;
+}
+.div-style{
+  margin: 5vh 2.5vw 0 2.5vw;
+  padding:0;
 }
