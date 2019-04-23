@@ -9,17 +9,20 @@ class Anime extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      eps:[]
+      eps:[],
+      pages: 0,
+      curPage: 1
     } ;
   }
 
   fetchEps = () =>{
-    let url = `https://api.jikan.moe/v3/anime/${this.props.anime.mal_id}/episodes/1`;
+    let url = `https://api.jikan.moe/v3/anime/${this.props.anime.mal_id}/episodes/${this.state.currPage}`;
     axios.get(url)
     .then(response =>response.data)
     .then(data=>{
       this.setState({
-        eps: data.episodes
+        eps: data.episodes,
+        pages: data.episodes_last_page
       });
     })
     .catch(e => console.log(`Sorry, ${e}`))
@@ -47,7 +50,7 @@ class Anime extends Component {
               <Episode eps={this.state.eps}/>
             </Modal.Content>
           </Modal>
-          : <Button><Icon name="close"></Icon>Unavailable</Button>
+          : <Button><Icon name="close"></Icon>No More</Button>
         }
       </section>
     );

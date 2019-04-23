@@ -83,3 +83,8 @@
   text-align: center;
   letter-spacing: 5px;
 }
+.my-cards{
+  border:solid;
+  display: flex;
+  flex-wrap: wrap;
+}

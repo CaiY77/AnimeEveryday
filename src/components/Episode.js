@@ -8,7 +8,12 @@ printEps = () => {
   console.log(eps)
 
   let epsArr = eps.map(episode =>{
-    return (<Card href={episode.video_url} target="_blank">
+    return (<Card
+      raised
+      href={episode.video_url}
+      target="_blank"
+      className="a-card"
+            >
       <Card.Content>
         <Card.Header>{episode.title}</Card.Header>
         <Card.Meta>{episode.title_japanese}</Card.Meta>
@@ -22,7 +27,9 @@ printEps = () => {
   render() {
     return (
       <div>
-        {this.printEps()}
+        <Card.Group itemsPerRow={4}>
+          {this.printEps()}
+        </Card.Group>
       </div>
     );
   }
