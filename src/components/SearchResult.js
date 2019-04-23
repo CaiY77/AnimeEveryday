@@ -1,9 +1,13 @@
 import React, {Component} from 'react';
-import { Icon, Button } from 'semantic-ui-react'
+import { Modal, Icon, Button } from 'semantic-ui-react'
 import Anime from './Anime'
 import '../css/SearchResult.css'
 
 class SearchResults extends Component {
+
+  openEpisodes = (anime) => {
+    console.log(anime);
+  }
 
   printAnime = () => {
     const {searchResults,handleFavorite,favorites} = this.props;
@@ -22,6 +26,7 @@ class SearchResults extends Component {
         handleFavorite = {handleFavorite}
         favorites={favorites}
         isFave = {isFave}
+        handleClick={this.openEpisodes}
              />
     })
     return allAnime;

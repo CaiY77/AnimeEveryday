@@ -13,12 +13,14 @@ class App extends Component {
       searchVal: '',
       genre: "",
       searchResults: [],
-      favorites: []
+      favorites: JSON.parse(window.localStorage.getItem('favorites')) || []
     };
   }
 
   searchHandle = (event) => {
-    this.setState({searchVal: event.target.value});
+    this.setState({
+      searchVal: event.target.value
+    });
   }
 
   genreHandle=(event)=>{
@@ -51,9 +53,10 @@ class App extends Component {
   }
 
   handleFavorite=(anime)=>{
+    const {favorites} =this.state;
 
-    const favCopy = this.state.favorites.slice();
-    const index = this.state.favorites.indexOf(anime);
+    const favCopy = favorites.slice();
+    const index = favorites.indexOf(anime);
 
     if (index >= 0){
       favCopy.splice(index,1);
@@ -61,11 +64,15 @@ class App extends Component {
       favCopy.push(anime);
     }
 
+    console.log(favCopy);
     this.setState({
       favorites: favCopy
     });
-  }
 
+    window.localStorage.clear();
+    window.localStorage.setItem('favorites', JSON.stringify(favorites));
+
+  }
 
 
 

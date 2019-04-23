@@ -11,11 +11,11 @@
   flex-wrap: wrap;
   padding: 5vh 0 5vh 0;
   margin: 5vh 0 0 0;
-  background: linear-gradient(270deg, rgba(189, 195, 199,0.7),rgba(44, 62, 80,0.7));
+  background: linear-gradient(270deg, rgba(189, 195, 199,0.6),rgba(44, 62, 80,0.6));
 }
 
 .anime-section{
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.4);
   margin: 5vh 2.5vw 0 2.5vw;
   padding: 0.5%;
   display: grid;
