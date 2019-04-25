@@ -121,7 +121,7 @@ class App extends Component {
   render() {
     const {searchVal,byGenre,searchResults,favorites,inBookmark,mangaResults} = this.state;
     return (<div className ="my-body">
-      <nav className="ui massive fluid three item menu">
+      <nav className="ui inverted massive fluid three item menu">
         <Link onClick={()=>this.handleInBookmark('no')} to="/" className="item link-style">Find My Anime</Link>
         <Link onClick={()=>this.handleInBookmark('no')} to="/manga" className="item link-style">Find My Manga</Link>
         <Link onClick={()=>this.handleInBookmark('yes')} to="/bookmark" className="item link-style">My Bookmarks</Link>
@@ -160,6 +160,7 @@ class App extends Component {
                        />}
         />
       </main>
+      <footer></footer>
     </div>);
   }
 }

@@ -12,6 +12,7 @@ printEps = () => {
       href={episode.video_url}
       target="_blank"
       className="a-card"
+      key={episode.episode_id}
             >
       <Card.Content>
         <Card.Header>{episode.title}</Card.Header>
@@ -38,7 +39,19 @@ printEps = () => {
           </Button>
         </div>
         <Card.Group itemsPerRow={4}>
-          {this.printEps()}
+          {
+            (this.props.ready)
+              ?this.printEps()
+              :<div class="ui icon message">
+                <i class="notched circle loading icon"></i>
+                <div class="content">
+                  <div class="header">
+                    Fetching...
+                  </div>
+                  <p className="loading">Taking too long? Try again later</p>
+                </div>
+              </div>
+          }
         </Card.Group>
         <div className="my-butt-bot">
           <Button onClick={()=>dec()} icon labelPosition='left'>

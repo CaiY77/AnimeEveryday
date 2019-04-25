@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Icon, Button, Modal } from 'semantic-ui-react'
+import { Icon, Button, Modal, Rating } from 'semantic-ui-react'
 import Favorite from './Favorite'
 import Episode from './Episode'
 import axios from 'axios'
@@ -11,7 +11,8 @@ class Anime extends Component {
     this.state = {
       eps:[],
       pages: 0,
-      currPage: 1
+      currPage: 1,
+      ready:false
     } ;
   }
 
@@ -22,7 +23,8 @@ class Anime extends Component {
     .then(data=>{
       this.setState({
         eps: data.episodes,
-        pages: data.episodes_last_page
+        pages: data.episodes_last_page,
+        ready:true
       });
     })
     .catch(e => alert(`Sorry, ${e}, too many calls`))
@@ -70,6 +72,7 @@ handleDec = () => {
                 eps={eps}
                 inc={this.handleInc}
                 dec={this.handleDec}
+                ready={this.state.ready}
               />
             </Modal.Content>
           </Modal>
