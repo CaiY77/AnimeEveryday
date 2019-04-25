@@ -15,7 +15,7 @@ class App extends Component {
       genre: '',
       searchResults: [],
       mangaResults: [],
-      where: null,
+      inBookmark: null,
       favorites: JSON.parse(window.localStorage.getItem('favorites')) || []
     };
   }
@@ -103,31 +103,32 @@ class App extends Component {
 
   }
 
-  crappyFix = () => {
-  this.setState({
-    where: true
-  });
-}
+  handleInBookmark = (answer) => {
+    if (answer === 'yes'){
+      this.setState({
+        inBookmark: true
+      });
+    }else{
+      this.setState({
+        inBookmark: false
+      });
+    }
 
-crappyFix2 = () => {
-  this.setState({
-    where: false
-  });
-}
+  }
 
 
 
   render() {
-    const {searchVal,byGenre,searchResults,favorites,where,mangaResults} = this.state;
+    const {searchVal,byGenre,searchResults,favorites,inBookmark,mangaResults} = this.state;
     return (<div className ="my-body">
       <nav className="ui massive fluid three item menu">
-        <Link onClick={()=>this.crappyFix2()} to="/" className="item link-style">Find My Anime</Link>
-        <Link onClick={()=>this.crappyFix2()} to="/manga" className="item link-style">Find My Manga</Link>
-        <Link onClick={()=>this.crappyFix()} to="/bookmark" className="item link-style">My Bookmarks</Link>
+        <Link onClick={()=>this.handleInBookmark('no')} to="/" className="item link-style">Find My Anime</Link>
+        <Link onClick={()=>this.handleInBookmark('no')} to="/manga" className="item link-style">Find My Manga</Link>
+        <Link onClick={()=>this.handleInBookmark('yes')} to="/bookmark" className="item link-style">My Bookmarks</Link>
       </nav>
 
       {
-        (where)
+        (inBookmark)
           ? null
           : (<SearchBar
             searchHandle={this.searchHandle}

@@ -41,7 +41,7 @@ printEps = () => {
           {this.printEps()}
         </Card.Group>
         <div className="my-butt-bot">
-          <Button onClick={()=>{dec()}} icon labelPosition='left'>
+          <Button onClick={()=>dec()} icon labelPosition='left'>
             <Icon name='left arrow' />
             Previous
           </Button>
