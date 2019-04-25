@@ -7,6 +7,10 @@
   font-family: dimitri;
   src: url(assets/fonts/dimitri.TTF);
 }
+@font-face {
+  font-family: aa_reg;
+  src: url(assets/fonts/aa_r.ttf);
+}
 
 * {
   font-family: dimis;
@@ -30,4 +34,19 @@ nav{
   left: 0;
   z-index: 10;
   border-radius: 0 !important;
+}
+main{
+  margin-bottom: 2vh;
+}
+footer{
+  height: 9vh;
+  padding: 3vh 0 3vh 0;
+  background: white;
+  border-top: dotted 2px;
+
+}
+.copy{
+  font-family: aa_reg;
+  display: flex;
+  justify-content: center;
 }

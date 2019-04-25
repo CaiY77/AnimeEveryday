@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {Route, Link} from 'react-router-dom'
+import {Icon} from 'semantic-ui-react'
 import SearchBar from './components/SearchBar.js'
 import Bookmark from './components/Bookmark.js'
 import SearchResult from './components/SearchResult.js'
@@ -160,7 +161,10 @@ class App extends Component {
                        />}
         />
       </main>
-      <footer></footer>
+      <footer>
+        <div className="copy"><Icon name="copyright outline icon"></Icon><p> Cai Yang 2019</p></div>
+        <div className="copy"><Icon name="github icon"></Icon><a href="https://github.com/CaiY77/ani-manage" target="_blank">My Github</a></div>
+      </footer>
     </div>);
   }
 }
