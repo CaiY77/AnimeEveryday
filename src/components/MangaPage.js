@@ -5,16 +5,20 @@ import '../css/SearchResult.css'
 class MangaPage extends Component {
 
   printManga = () => {
-    const { mangaResults } = this.props
+    const { mangaResults,favorites,handleFavorite} = this.props
 
     const allManga = mangaResults.map(manga=>{
+      let isFave = favorites.includes(manga);
       return <Manga
+        manga={manga}
         title={manga.title}
         img ={manga.image_url}
         chapter={manga.chapters}
         score = {manga.score}
         syn = {manga.synopsis}
         link = {manga.url}
+        handleFavorite = {handleFavorite}
+        isFave = {isFave}
              />
     })
     return allManga;

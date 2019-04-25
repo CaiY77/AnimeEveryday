@@ -153,7 +153,9 @@ crappyFix2 = () => {
         />
         <Route path="/manga"
           render={()=> <MangaPage
+            handleFavorite={this.handleFavorite}
             mangaResults = {mangaResults}
+            favorites={favorites}
                        />}
         />
       </main>
