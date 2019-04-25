@@ -7,10 +7,10 @@ This is my anime managing app that allows you to search through different anime 
 
 Ani-Mange is a React based app that is deployed on Heroku. This application takes usage of JSX/JS, HS, HTML, CSS and also implements the concept of local storage such that on refresh, data on the bookmark page is not lost. This application also takes advantage of some external libraries such as:
 
-**semantic-ui**
-**semantic-ui-React**
-**axios**
-**react-router-dom**
+* semantic-ui
+* semantic-ui-React
+* axios
+* react-router-dom
 
 The API used in this application is from Jikan. Data is being pulled through GET request.
 
@@ -23,8 +23,9 @@ Different Endpoints:
 ```javascript
 "https://api.jikan.moe/v3/search/anime?q={search}&page={page}"
 "https://api.jikan.moe/v3/search/manga?q={search}&page={page}"
-"https://api.jikan.moe/v3/anime/{id}/episodes/{page}"
 "https://api.jikan.moe/v3/genre/anime/{search}/1"
+"https://api.jikan.moe/v3/genre/manga/{search}/1"
+"https://api.jikan.moe/v3/anime/{id}/episodes/{page}"
 ```
 
 #### My Anime Component (where a lot of the magic happens)
