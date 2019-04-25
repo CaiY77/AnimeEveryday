@@ -77,7 +77,14 @@ Different Endpoints:
 * Fetches from Jikan's API.
 * Display Searched results
 
-**Everything else is a feature :D**
+## Additional features
+* Search by Manga and/or by Anime
+* Search by Genre for both Manga/Anime
+* Bookmark Anime/Mangas that you like
+* Local storages saves your liked Anime/Manga
+* Anime component calls another API to get Episodes data
+* Display Episodes on a modal with links to Episodes
+* Grab Manga URL from API endpoint
 
 ## Hierarchy Diagram
 <img width="870" alt="Screen Shot 2019-04-25 at 2 12 42 PM" src="https://user-images.githubusercontent.com/33525692/56758276-38de6400-6764-11e9-884e-b6b11f8d3532.png">
