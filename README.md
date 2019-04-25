@@ -27,6 +27,18 @@ Different Endpoints:
 "https://api.jikan.moe/v3/genre/manga/{search}/1"
 "https://api.jikan.moe/v3/anime/{id}/episodes/{page}"
 ```
+## Minimum Viable Product
+* Fetches from Jikan's API.
+* Display Searched results
+
+## Additional features
+* Search by Manga and/or by Anime
+* Search by Genre for both Manga/Anime
+* Bookmark Anime/Mangas that you like
+* Local storages saves your liked Anime/Manga
+* Anime component calls another API to get Episodes data
+* Display Episodes on a modal with links to Episodes
+* Grab Manga URL from API endpoint
 
 #### My Anime Component (where a lot of the magic happens)
 ```JSX
@@ -72,19 +84,6 @@ Different Endpoints:
 
 ## Bookmarks Page
 <img width="1440" alt="Screen Shot 2019-04-25 at 3 26 36 AM" src="https://user-images.githubusercontent.com/33525692/56717211-2c2d2200-670a-11e9-8d47-3961646e6adb.png">
-
-## Minimum Viable Product
-* Fetches from Jikan's API.
-* Display Searched results
-
-## Additional features
-* Search by Manga and/or by Anime
-* Search by Genre for both Manga/Anime
-* Bookmark Anime/Mangas that you like
-* Local storages saves your liked Anime/Manga
-* Anime component calls another API to get Episodes data
-* Display Episodes on a modal with links to Episodes
-* Grab Manga URL from API endpoint
 
 ## Hierarchy Diagram
 <img width="870" alt="Screen Shot 2019-04-25 at 2 12 42 PM" src="https://user-images.githubusercontent.com/33525692/56758276-38de6400-6764-11e9-884e-b6b11f8d3532.png">
