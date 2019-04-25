@@ -70,10 +70,14 @@ Different Endpoints:
 ## Episodes Modal
 <img width="1431" alt="Screen Shot 2019-04-24 at 11 51 09 PM" src="https://user-images.githubusercontent.com/33525692/56708958-ae0e5280-66ec-11e9-8236-098c6631e31c.png">
 
-##Bookmarks Page
+## Bookmarks Page
 <img width="1440" alt="Screen Shot 2019-04-25 at 3 26 36 AM" src="https://user-images.githubusercontent.com/33525692/56717211-2c2d2200-670a-11e9-8d47-3961646e6adb.png">
 
+## Minimum Viable Product
+* Fetches from Jikan's API.
+* Display Searched results
 
+** ## Everything else is a feature :) **
 
-![IMG_4138](https://user-images.githubusercontent.com/33525692/56442588-596b7180-62bf-11e9-9d2a-d5d75ef534f4.jpeg)
-![IMG_4139](https://user-images.githubusercontent.com/33525692/56442603-60927f80-62bf-11e9-8c2d-220833fc6437.jpeg)
+## Hierarchy Diagram
+<img width="870" alt="Screen Shot 2019-04-25 at 2 12 42 PM" src="https://user-images.githubusercontent.com/33525692/56758276-38de6400-6764-11e9-884e-b6b11f8d3532.png">
