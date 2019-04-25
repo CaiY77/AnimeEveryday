@@ -70,8 +70,11 @@ Different Endpoints:
 </section>
 ```
 
-## Landing Page
-<img width="1440" alt="Screen Shot 2019-04-25 at 3 23 48 AM" src="https://user-images.githubusercontent.com/33525692/56717188-20d9f680-670a-11e9-9a6a-e838ac524449.png">
+## Search by Title
+<img width="1440" alt="Screen Shot 2019-04-25 at 2 38 37 PM" src="https://user-images.githubusercontent.com/33525692/56759890-f880e500-6767-11e9-923c-b39e218936b0.png">
+
+## Search by Genre
+<img width="1440" alt="Screen Shot 2019-04-25 at 2 38 03 PM" src="https://user-images.githubusercontent.com/33525692/56759910-05053d80-6768-11e9-9a91-0a86be71752d.png">
 
 ## Anime Search Results
 <img width="1440" alt="Screen Shot 2019-04-25 at 3 24 27 AM" src="https://user-images.githubusercontent.com/33525692/56717248-3a7b3e00-670a-11e9-9278-bcf859092ed9.png">
