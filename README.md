@@ -26,7 +26,8 @@ Different Endpoints:
 "https://api.jikan.moe/v3/anime/{id}/episodes/{page}"
 "https://api.jikan.moe/v3/genre/anime/{search}/1"
 ```
-#### <Anime /> Component (Where a lot of the magic happens)
+
+#### My Anime Component (where a lot of the magic happens)
 ```JSX
 <section className="anime-section">
 
