@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Manga from './Manga.js'
+import Manga from './Manga'
 import '../css/SearchResult.css'
 
 class MangaPage extends Component {
@@ -8,8 +8,16 @@ class MangaPage extends Component {
     const { mangaResults } = this.props
 
     const allManga = mangaResults.map(manga=>{
-      return <Manga />
+      return <Manga
+        title={manga.title}
+        img ={manga.image_url}
+        chapter={manga.chapters}
+        score = {manga.score}
+        syn = {manga.synopsis}
+        link = {manga.url}
+             />
     })
+    return allManga;
   }
 
   render() {
