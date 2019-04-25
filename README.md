@@ -58,16 +58,19 @@ Different Endpoints:
 ```
 
 ## Landing Page
-<img width="1440" alt="Screen Shot 2019-04-24 at 11 50 37 PM" src="https://user-images.githubusercontent.com/33525692/56708861-596ad780-66ec-11e9-9af3-9b222344c889.png">
+<img width="1440" alt="Screen Shot 2019-04-25 at 3 23 48 AM" src="https://user-images.githubusercontent.com/33525692/56717188-20d9f680-670a-11e9-9a6a-e838ac524449.png">
 
-## Search Results
-<img width="1440" alt="Screen Shot 2019-04-24 at 11 51 34 PM" src="https://user-images.githubusercontent.com/33525692/56708925-9c2caf80-66ec-11e9-80a6-4976da3dc298.png">
+## Anime Search Results
+<img width="1440" alt="Screen Shot 2019-04-25 at 3 24 27 AM" src="https://user-images.githubusercontent.com/33525692/56717248-3a7b3e00-670a-11e9-9278-bcf859092ed9.png">
+
+## Manga Search Results
+<img width="1440" alt="Screen Shot 2019-04-25 at 3 25 00 AM" src="https://user-images.githubusercontent.com/33525692/56717166-14ee3480-670a-11e9-83b3-971331884eb7.png">
 
 ## Episodes Modal
 <img width="1431" alt="Screen Shot 2019-04-24 at 11 51 09 PM" src="https://user-images.githubusercontent.com/33525692/56708958-ae0e5280-66ec-11e9-8236-098c6631e31c.png">
 
 ##Bookmarks Page
-<img width="1440" alt="Screen Shot 2019-04-24 at 11 52 49 PM" src="https://user-images.githubusercontent.com/33525692/56708966-ba92ab00-66ec-11e9-953a-7d2dd405b7ba.png">
+<img width="1440" alt="Screen Shot 2019-04-25 at 3 26 36 AM" src="https://user-images.githubusercontent.com/33525692/56717211-2c2d2200-670a-11e9-8d47-3961646e6adb.png">
 
 ![IMG_4138](https://user-images.githubusercontent.com/33525692/56442588-596b7180-62bf-11e9-9d2a-d5d75ef534f4.jpeg)
 ![IMG_4139](https://user-images.githubusercontent.com/33525692/56442603-60927f80-62bf-11e9-8c2d-220833fc6437.jpeg)
