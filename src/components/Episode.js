@@ -28,7 +28,7 @@ printEps = () => {
     return (
       <div>
         <div className="my-butt-top">
-          <Button onClick={()=>{dec()}} icon labelPosition='left'>
+          <Button onClick={()=>dec()} icon labelPosition='left'>
             <Icon name='left arrow' />
             Previous
           </Button>

@@ -25,7 +25,7 @@ class Anime extends Component {
         pages: data.episodes_last_page
       });
     })
-    .catch(e => console.log(`Sorry, ${e}`))
+    .catch(e => alert(`Sorry, ${e}, too many calls`))
   }
 
 handleInc = () => {
