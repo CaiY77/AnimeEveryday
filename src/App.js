@@ -21,6 +21,10 @@ class App extends Component {
     };
   }
 
+  componentDidMount() {
+   document.title = 'Ani-Manage';
+ }
+
   searchHandle = (event) => {
     this.setState({
       searchVal: event.target.value
@@ -115,7 +119,6 @@ class App extends Component {
         inBookmark: false
       });
     }
-
   }
 
 
